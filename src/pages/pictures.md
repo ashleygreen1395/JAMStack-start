@@ -1,9 +1,7 @@
 ---
-layout: layout.html
 pageTitle: Apples
 navTitle: Pictures
 singleImage: /img/apples.png
-tags: page
 pageClass: pictures
 images:
   - apples.png
