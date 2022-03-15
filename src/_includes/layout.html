@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <header>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>{{ site.siteTitle }}</title>
-  </head>
+    <btn class="beta" href="#"></btn>
+    <btn class="omega" href="#"></btn>
+  </header>
   <body class="{{ pageClass }}">
-    <nav aria-label="Primary navigaton">
-      <ul>
-        {% for page in collections.page %}
-        <li>
-          <a href="{{ page.url | url }}">{{ page.data.navTitle }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="container">
+      <img class="logo" src="../img/logo.png" />
+      <nav aria-label="Primary navigation">
+        <ul>
+          {% for page in collections.page %}
+          <li>
+            <a href="{{ page.url | url }}">{{ page.data.navTitle }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
 
-    <main tabindex="-1" class="content">
-      <h1>{{ pageTitle }}</h1>
-      {{ content }}
-    </main>
+      <main tabindex="-1" class="content">
+        <h1>{{ pageTitle }}</h1>
+        {{ content }}
+      </main>
+      <div class="modal-outer">
+        <div class="modal">
+          <h3>Hi! I'm a Modal Window (ʘ‿ʘ)╯</h3>
+          <p>Information about the beta program.</p>
+        </div>
+      </div>
+      <script src="js/scripts.js"></script>
+    </div>
   </body>
 </html>

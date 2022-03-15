@@ -1,16 +1,12 @@
 ---
 layout: layout.html
-pageTitle: New York Today
+pageTitle: Welcome to Headquarters
 tags: page
-navTitle: Home
+navTitle: Headquarters
+pageClass: home
 ---
 
-## Articles
+## Where We Fight Evil & Stay Cute
 
-> Quotation
-
-{% for page in collections.page %}
-
-  <h2><a href="{{ page.url }}">{{ page.data.pageTitle | upcase }}</a></h2>
-  <em>{{ page.date | date: "%Y-%m-%d" }}</em>
-{% endfor %}
+<p>Hi! We're Luna (right) and Artemis (left) and we're advisors from the Moon Kingdom, here to run HQ and help Sailor Moon and the Sailor Guardians protect Earth!</p>
+<img class="luna" src="../img/cats.png">

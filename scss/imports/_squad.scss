@@ -1,0 +1,221 @@
+@media (min-width: 750px) {
+  #guardians {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 18% 32% 18% 32%;
+    grid-template-rows: repeat(6, 200px);
+    gap: 10px;
+  }
+  .squad {
+    height: 100%;
+    justify-self: right;
+  }
+  .blurb {
+    justify-self: left;
+    text-align: left;
+  }
+  // picture IDs
+
+  #moon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #tuxedo {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #mercury {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #mars {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  #jupiter {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #venus {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  #chibi {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  #neptune {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  #uranus {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  #saturn {
+    grid-column: 3;
+    grid-row: 5;
+  }
+  #pluto {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  // blurb IDs
+
+  #usagi {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #mamo {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  #ami {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #rei {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  #mako {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  #mina {
+    grid-column: 4;
+    grid-row: 3;
+  }
+  #chibiusa {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  #michi {
+    grid-column: 4;
+    grid-row: 4;
+  }
+  #haruka {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  #hotaru {
+    grid-column: 4;
+    grid-row: 5;
+  }
+  #setsu {
+    grid-column: 2;
+    grid-row: 6;
+  }
+}
+
+@media (max-width: 750px) {
+  #guardians {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: repeat(11, 200px);
+    gap: 10px;
+  }
+  .squad {
+    height: 100%;
+    justify-self: right;
+  }
+  .blurb {
+    justify-self: left;
+    text-align: left;
+  }
+  // picture IDs
+
+  #moon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #tuxedo {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #mercury {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #mars {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  #jupiter {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  #venus {
+    grid-column: 1;
+    grid-row: 6;
+  }
+  #chibi {
+    grid-column: 1;
+    grid-row: 7;
+  }
+  #neptune {
+    grid-column: 1;
+    grid-row: 8;
+  }
+  #uranus {
+    grid-column: 1;
+    grid-row: 9;
+  }
+  #saturn {
+    grid-column: 1;
+    grid-row: 10;
+  }
+  #pluto {
+    grid-column: 1;
+    grid-row: 11;
+  }
+
+  // blurb IDs
+
+  #usagi {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #mamo {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #ami {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  #rei {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  #mako {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  #mina {
+    grid-column: 2;
+    grid-row: 6;
+  }
+  #chibiusa {
+    grid-column: 2;
+    grid-row: 7;
+  }
+  #michi {
+    grid-column: 2;
+    grid-row: 8;
+  }
+  #haruka {
+    grid-column: 2;
+    grid-row: 9;
+  }
+  #hotaru {
+    grid-column: 2;
+    grid-row: 10;
+  }
+  #setsu {
+    grid-column: 2;
+    grid-row: 11;
+  }
+}

@@ -1,68 +1,430 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #333;
-  font-size: 100%;
-  max-width: 980px;
-  margin: 0 auto;
-}
+@media (min-width: 300px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #333;
+    font-size: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #ffc9dc;
+    text-align: center;
+    display: block;
+  }
 
-img {
-  width: 100%;
-}
+  .logo {
+    width: 50%;
+  }
 
-a {
-  text-decoration: none;
-  color: #007eb6;
-}
+  a {
+    text-decoration: none;
+  }
 
+  main {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .homelinks {
+    margin-bottom: 0;
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+    background: #007eb6;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    /* width: 4rem; */
+  }
+
+  .luna {
+    width: 60%;
+  }
+
+  p {
+    margin: 30px;
+  }
+}
 nav ul {
   padding: 0;
   list-style: none;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
   display: flex;
+  justify-content: center;
 }
-
 nav ul a {
-  padding: 0.5rem 1rem;
-}
-
-.content {
-  margin-top: 2rem;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  border-left: 2px solid #007eb66e;
-  border-radius: 4px;
-}
-
-.homelinks {
-  margin-bottom: 0;
-}
-
-.nav-item-active a {
   color: #fff;
-  background-color: #007eb6;
-  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+nav ul li {
+  width: 130px;
+  background-color: #5e5fab;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+nav ul li:hover {
+  background: linear-gradient(to bottom, #5e5fab 0%, #424378 100%);
 }
 
-button {
-  border: none;
-  padding: 0.5rem 1rem;
-  background: #007eb6;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 4rem;
+@media (min-width: 300px) {
+  .modal {
+    max-width: 80%;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 2px solid var(--orange);
+    background: white;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    justify-self: center;
+  }
+
+  .modal.open {
+    transform: translateY(100%);
+    transition: transform 3s;
+  }
+
+  modal-outer.open .modal {
+    transform: translateY(0);
+  }
+
+  .open {
+    display: block;
+  }
+
+  .modal-outer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    /* Hide this until we need it */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+
+  .modal-outer.open {
+    transition: 1s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .gif {
+    width: 100%;
+  }
+}
+btn.beta {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: url("img/moon.svg") no-repeat;
+  transform: rotate(20deg);
+  transition: all 1s ease;
 }
 
-.pics .content img {
-  width: 60%;
-  padding: 1rem;
+.beta:hover {
+  transform: rotate(0deg) scale(1.2);
 }
 
-.pictures img {
-  max-width: 50%;
+btn.omega {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: url("img/star.svg") no-repeat;
+  transform: rotate(-20deg);
+  transition: all 1s ease;
 }
-.pictures h1 {
-  color: rgb(11, 123, 11);
+
+.omega:hover {
+  transform: rotate(0deg) scale(1.2);
 }
+
+@media (min-width: 750px) {
+  #guardians {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 18% 32% 18% 32%;
+    grid-template-rows: repeat(6, 200px);
+    gap: 10px;
+  }
+
+  .squad {
+    height: 100%;
+    justify-self: right;
+  }
+
+  .blurb {
+    justify-self: left;
+    text-align: left;
+  }
+
+  #moon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #tuxedo {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  #mercury {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #mars {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  #jupiter {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #venus {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  #chibi {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  #neptune {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  #uranus {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  #saturn {
+    grid-column: 3;
+    grid-row: 5;
+  }
+
+  #pluto {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  #usagi {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #mamo {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  #ami {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #rei {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  #mako {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  #mina {
+    grid-column: 4;
+    grid-row: 3;
+  }
+
+  #chibiusa {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  #michi {
+    grid-column: 4;
+    grid-row: 4;
+  }
+
+  #haruka {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  #hotaru {
+    grid-column: 4;
+    grid-row: 5;
+  }
+
+  #setsu {
+    grid-column: 2;
+    grid-row: 6;
+  }
+}
+@media (max-width: 750px) {
+  #guardians {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2, 1fr;
+    grid-template-rows: repeat(11, 200px);
+    gap: 10px;
+  }
+
+  .squad {
+    height: 100%;
+    justify-self: right;
+  }
+
+  .blurb {
+    justify-self: left;
+    text-align: left;
+  }
+
+  #moon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #tuxedo {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #mercury {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #mars {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  #jupiter {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  #venus {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  #chibi {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  #neptune {
+    grid-column: 1;
+    grid-row: 8;
+  }
+
+  #uranus {
+    grid-column: 1;
+    grid-row: 9;
+  }
+
+  #saturn {
+    grid-column: 1;
+    grid-row: 10;
+  }
+
+  #pluto {
+    grid-column: 1;
+    grid-row: 11;
+  }
+
+  #usagi {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #mamo {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #ami {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  #rei {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  #mako {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  #mina {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+  #chibiusa {
+    grid-column: 2;
+    grid-row: 7;
+  }
+
+  #michi {
+    grid-column: 2;
+    grid-row: 8;
+  }
+
+  #haruka {
+    grid-column: 2;
+    grid-row: 9;
+  }
+
+  #hotaru {
+    grid-column: 2;
+    grid-row: 10;
+  }
+
+  #setsu {
+    grid-column: 2;
+    grid-row: 11;
+  }
+}
+.watch {
+  text-align: center;
+  margin: 0px 20%;
+}
+
+.video {
+  margin: 30px;
+  width: 80%;
+}
+
+/*# sourceMappingURL=styles.css.map */
